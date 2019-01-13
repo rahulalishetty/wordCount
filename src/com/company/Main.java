@@ -2,6 +2,7 @@ package com.company;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,11 +37,15 @@ public class Main {
                     }
                 }
             }
+            File outputFile=new File("/home/rahulalishetty/output.txt");
+            outputFile.createNewFile();
+            PrintWriter writer=new PrintWriter("/home/rahulalishetty/output.txt","UTF-8");
             for(Character character: map.keySet()) {
                 String value=map.get(character).toString();
-                System.out.println(character+" : "+ value );
+                String line= character+" : "+ value ;
+                writer.println(line);
             }
-
+            writer.close();
         }catch (Exception e) {
             e.printStackTrace();
         }
