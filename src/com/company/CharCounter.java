@@ -33,8 +33,9 @@ public class CharCounter {
         Scanner reader=new Scanner(new FileInputStream(file));
         ArrayList<String> words=new ArrayList<>();
 
-        while(reader.hasNext())
+        while(reader.hasNext()){
             words.add(reader.next());
+        }
 
         for(String word: words){
             for(int i=0;i<word.length();i++){
