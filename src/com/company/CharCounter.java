@@ -3,7 +3,6 @@ package com.company;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -24,7 +23,7 @@ public class CharCounter {
         try {
             wordCountHandler(filePath);
         }catch (Exception e) {
-            e.printStackTrace();
+            logger.info("error ocuured"+ e);
         }
     }
 
